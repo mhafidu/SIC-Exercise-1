@@ -11,11 +11,6 @@ body{
 }
 .containner{
     position: relative;
-    display: grid;
-    grid-template-areas: 
-    "nav nav"
-    "main aside"
-    "fot fot";
 }
 /* Navbar */
 
@@ -31,7 +26,6 @@ nav{
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
-    grid-area: nav;
 }
 
 nav .logo h4{
@@ -55,17 +49,61 @@ nav ul li a{
 nav ul li a:hover{
     color: rgb(255, 186, 140); 
 }
+/* Menu Hamburger */
+.menu-toggle input{
+    position: absolute;
+    height: 25px;
+    width: 45px;
+    left: -8px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+}
+.menu-toggle{
+    display: inherit;
+    flex-direction: column;
+    height: 21px;
+    position: relative;
+    justify-content: space-between;
+    display: none;
+    
+}
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transition: all 0.5s;
+}
 
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
 
-
-
+.containner .containner1{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
 
 main{
-    width: 50%;
-    margin: 50px;
+    width: 30%;
     margin-top: 100px;
-    margin-left: 100px;
-    grid-area: main;
 }
 .skill{
     display: flex;
@@ -79,7 +117,6 @@ aside{
     width: 400px;
     height: 400px;
     background-color: rgb(238, 95, 0);
-    grid-area: aside;
     margin: 50px ;
     margin-top: 150px;
     position: relative;
@@ -122,70 +159,138 @@ aside .name {
 
 /* footer */
 
-
 footer{
-    height: 200px;
-    background-color: rgb(238, 95, 0);
     display: flex;
-    margin-top: 200px;
-    grid-area: fot;
+    background-color: rgb(238, 95, 0);
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    color: white;
 }
 footer .footer1{
-    width: 25%;
+    font-family:'Pacifico', cursive; 
+    color: white;
 }
-footer .footer1 .logo{
-    height: 200px;
-    background-color: white;
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-    font-family: 'Pacifico', cursive;
-    letter-spacing: 3px;
-}
-footer .footer1 .logo h2 span{
-    color:rgb(238, 95, 0) ;
+footer .media .logo1 img{
+    width: 20px;
 }
 footer .footer2{
+    
     display: flex;
-    color: white;
-    align-items: center;
-    justify-content: space-around;
-    width: 75%;  
-}
-footer .footer2 .quotes{
-    width: 25%;
+    justify-content: space-between;
     
 }
-footer .footer2 .quotes p{
-    margin-top: 10px;
+footer .footer2 .quotes{
+    
+    width: 40%;
+    
 }
 footer .footer2 .media{
     display: flex;
-    height: 70%;
+    
     width: 20%;
-    justify-content: space-evenly;
-    align-items:center ;
+    justify-content: space-between;
 }
-footer .footer2 .media  .logo1 img{
-    width: 20px;
-    height: 20px;
-    margin-top: 5px;
-}
-footer .footer2 .media  .logo1{
+footer .footer2 .media .logo1{
     display: flex;
-    height: 90%;
     flex-direction: column;
     justify-content: space-evenly;
+    
 }
 footer .footer2 .media .name{
     display: flex;
-    height: 95%;
     flex-direction: column;
     justify-content: space-evenly;
-    font-size: 12px;
+    
     
 }
-footer .footer2 .media .name span:nth-child(3){
-    margin-left: 5px;
-}
+@media screen and (max-width:576px){
+    .menu-toggle{
+        display: flex;
+    }
+    nav{
+        justify-content: space-around;
+    }
+    nav .logo{
+        width: 80%;
+    }
+    nav ul{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        background-color: rgb(238, 95, 0);
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateY(-100%);
+        transition: all 1s;
+        
+    }
+    nav ul li{
+        padding: 20px;
+        text-align: center;
+    }
 
+    nav ul.slide{
+        transform: translateY(0);
+    }
+    .containner .containner1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .containner .containner1 main {
+        text-align:center ;
+        width: 70%;
+        order: 2;
+        margin-bottom: 50px;
+    }
+    .containner .containner1 aside{
+        order: 1;
+    }
+    footer{
+        display: flex;
+        background-color: rgb(238, 95, 0);
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+        color: white;
+        
+    }
+
+    footer .media .logo1 img{
+        width: 20px;
+    }
+    footer .footer2{
+        
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        
+    }
+    footer .footer2 .quotes{
+        text-align: center;
+        width: 50%;
+        
+    }
+    footer .footer2 .media{
+        display: flex;
+        
+        width: 30%;
+        height: 30%;
+        justify-content: space-between;
+    }
+    footer .footer2 .media .logo1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+    footer .footer2 .media .name{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
