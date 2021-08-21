@@ -257,9 +257,8 @@ footer .footer2 .media .name{
         display: flex;
         justify-content: space-around;
         flex-direction: column;
-        
         align-items: center;
-        height: 70%;
+        height: 100%;
         
     }
     footer .footer2 .quotes{
