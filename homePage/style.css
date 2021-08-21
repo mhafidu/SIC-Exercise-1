@@ -215,9 +215,11 @@ footer .footer2 .media .name{
         justify-content: space-evenly;
         transform: translateY(-100%);
         transition: all 1s;
+        
     }
     nav ul li{
         padding: 20px;
+        text-align: center;
     }
 
     nav ul.slide{
