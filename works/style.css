@@ -305,8 +305,9 @@ footer .footer2 .media .name{
         margin: 0px;
         justify-content: center;
         order: 2;
-        height: 800px;
+        height: 1000px;
         margin-bottom: 100px;
+        border: 1px solid black;
     }
     .big{
         flex-direction: column;
