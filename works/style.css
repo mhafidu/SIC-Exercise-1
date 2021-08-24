@@ -172,7 +172,7 @@ aside{
     background-color: rgb(238, 95, 0);
     
     /* margin: 50px ; */
-    /* margin-top: 150px; */
+    margin-top: 20px;
     position: relative;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     border-radius: 30px; 
@@ -295,12 +295,12 @@ footer .footer2 .media .name{
     .container{
         grid-template-columns:repeat(auto-fit,175px) ;
         grid-template-rows: repeat(auto-fit, 125px);
-        margin: 0px;
+        margin: 50px;
         justify-content: center;
         order: 2;
-        height: 1000px;
+        height: 800px;
         margin-bottom: 100px;
-        border: 1px solid black;
+        
     }
     .item .title{
         height: 25%;
@@ -314,6 +314,7 @@ footer .footer2 .media .name{
     }
     .big aside{
         order: 1;
+        margin: 20px auto;
     }
     footer{
         display: flex;
