@@ -324,6 +324,7 @@ footer .footer2 .media .name{
         order: 1;
         top: 0;
         left: 0;
+        display: none;
     }
     footer{
         display: flex;
