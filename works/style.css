@@ -109,7 +109,7 @@ nav ul li a:hover{
 
 h1{
     margin-top: 70px;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-top: 100px;
     
 }
@@ -295,7 +295,7 @@ footer .footer2 .media .name{
     .container{
         grid-template-columns:repeat(auto-fit,175px) ;
         grid-template-rows: repeat(auto-fit, 125px);
-        margin: 50px;
+        
         justify-content: center;
         order: 2;
         height: 800px;
