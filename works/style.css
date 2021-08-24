@@ -33,6 +33,7 @@ nav{
 nav .logo h4{
     font-family: 'Pacifico', cursive;
     letter-spacing: 3px;
+    color: white;
 }
 
  nav ul{
@@ -287,6 +288,7 @@ footer .footer2 .media .name{
     nav ul li{
         padding: 20px;
         text-align: center;
+        color: white;
     }
 
     nav ul.slide{
