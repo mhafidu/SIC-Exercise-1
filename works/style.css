@@ -12,11 +12,6 @@ body{
 }
 .containner1{
     position: relative;
-    display: grid;
-    grid-template-areas: 
-    "nav nav"
-    "con aside"
-    "fot fot";
     
 }
 /* Navbar */
@@ -33,7 +28,6 @@ nav{
     top: 0;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
     z-index: 2;
-    grid-area: nav;
 }
 
 nav .logo h4{
@@ -131,7 +125,6 @@ h1{
     grid-template-rows: repeat(3, 150px);
     gap: 20px;
     z-index: -1;
-    grid-area: con;
     
 }
 .item{
@@ -183,7 +176,7 @@ aside{
     position: relative;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     border-radius: 30px; 
-    grid-area: aside;
+    
    
 }
 aside .picture{
@@ -319,12 +312,8 @@ footer .footer2 .media .name{
         width: 100%;
         
     }
-    aside{
-        
+    .big aside{
         order: 1;
-        top: 0;
-        left: 0;
-        display: none;
     }
     footer{
         display: flex;
