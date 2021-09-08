@@ -14,90 +14,7 @@ body{
 .containner1{
     position: relative;;
 }
-/* Navbar */
 
-nav{
-    display: flex;
-    background-color: rgb(255, 102, 0);
-    justify-content: space-around;
-    height: 50px;
-    color: rgb(255, 240, 230);
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
-    z-index: 2;
-    
-}
-
-nav .logo h4{
-    font-family: 'Pacifico', cursive;
-    letter-spacing: 3px;
-    color: rgb(255, 240, 230);
-}
-
- nav ul{
-    display: flex;
-    list-style: none;
-    width: 40%;
-    justify-content: space-between;
-    
-}
-
-nav ul li a{
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-nav ul li a:hover{
-    color: rgb(165, 66, 0); 
-}
-/* Menu Hamburger */
-.menu-toggle input{
-    position: absolute;
-    height: 25px;
-    width: 45px;
-    left: -8px;
-    top: -3px;
-    opacity: 0;
-    cursor: pointer;
-}
-.menu-toggle{
-    display: inherit;
-    flex-direction: column;
-    height: 21px;
-    position: relative;
-    justify-content: space-between;
-    display: none;
-    
-}
-.menu-toggle span{
-    display: block;
-    width: 28px;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 3px;
-    transition: all 0.5s;
-}
-
-/* Hamburger Menu Animation */
-.menu-toggle span:nth-child(2){
-    transform-origin: 0 0;
-}
-.menu-toggle span:nth-child(4){
-    transform-origin: 0 100%;
-}
-.menu-toggle input:checked ~ span:nth-child(2){
-    transform: rotate(45deg) translate(-1px, -1px);
-}
-.menu-toggle input:checked ~ span:nth-child(4){
-    transform: rotate(-45deg) translate(-1px, -1px);
-}
-.menu-toggle input:checked ~ span:nth-child(3){
-    opacity: 0;
-    transform: scale(0);
-}
 
 
 h1{
@@ -184,36 +101,7 @@ footer .footer2 .media .name{
     
 }
 @media screen and (max-width:576px){
-    .menu-toggle{
-        display: flex;
-    }
-    nav{
-        justify-content: space-around;
-    }
-    nav .logo{
-        width: 80%;
-    }
-    nav ul{
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        top: 0;
-        right: 0;
-        background-color: rgb(238, 95, 0);
-        align-items: center;
-        justify-content: space-evenly;
-        transform: translateY(-100%);
-        transition: all 1s;
-        
-    }
-    nav ul li{
-        padding: 20px;
-        text-align: center;
-    }
-
-    nav ul.slide{
-        transform: translateY(0);
-    }
+   
     .containner{
         display: flex;
         flex-direction: column;  
