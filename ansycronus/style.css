@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.containner{
+    margin: 50px ;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid white;
+    padding: 20px;
+}
+.deskripsi{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+header img{
+    border-radius: 100%;
+    border: 5px solid rgb(255, 0, 170);
+}
+.foll{
+    display: flex;
+    /* border: 1px solid white; */
+    width: 40%;
+    justify-content: space-around;
+}
